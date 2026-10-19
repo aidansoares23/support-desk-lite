@@ -1,0 +1,29 @@
+{
+  "next_id": 4,
+  "tickets": [
+    [
+      1,
+      {
+        "title": "Printer broken",
+        "priority": "high",
+        "status": "resolved"
+      }
+    ],
+    [
+      2,
+      {
+        "title": "WiFi disconnected",
+        "priority": "medium",
+        "status": "resolved"
+      }
+    ],
+    [
+      3,
+      {
+        "title": "Monitor flickering",
+        "priority": "low",
+        "status": "open"
+      }
+    ]
+  ]
+}
