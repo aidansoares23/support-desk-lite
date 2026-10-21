@@ -12,7 +12,7 @@ function buildTicket(title, priority) {
     return null;
   }
 
-  const ticket = { title: title, status: "open" };
+  const ticket = { title: title, status: "open", priority: priority };
   return ticket;
 }
 

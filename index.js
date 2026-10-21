@@ -18,11 +18,11 @@ function loadTicketsFromFile() {
 
   // 1. Restore the next ticket id
   // this ticket id is the same as var on line 3?
-  ticket_id = data.next_id;
+  state.ticket_id = data.next_id;
   // 2. Restore the saved tickets onto the map
   // use tickets var & for loop?
   for (const [id, ticket] of data.tickets) {
-    tickets.set(id, ticket);
+    state.tickets.set(id, ticket);
   }
 }
 
@@ -58,7 +58,7 @@ function printAllTickets(tickets) {
     return;
   }
 
-  for (const [id, ticket] of tickets) {
+  for (const [id, ticket] of state.tickets) {
     console.log(
       `${id} | ${ticket.title} | ${ticket.priority} | ${ticket.status}`,
     );
@@ -105,4 +105,4 @@ function filterTicketsByStatus(status) {
 // resolveTicket(2);
 
 loadTicketsFromFile();
-printAllTickets(tickets);
+printAllTickets(state.tickets);
